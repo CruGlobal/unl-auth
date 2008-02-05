@@ -67,9 +67,15 @@ class UNL_Auth_CAS extends UNL_Auth
      */
     private function __construct(array $options = null)
     {
+        if (isset($_SESSION)) {
+            $start_session = false;
+        } else {
+            $start_session = true;
+        }
         phpCAS::setDebug(false);
         phpCAS::client(CAS_VERSION_2_0,
-            $this->cas_options['host'], $this->cas_options['port'], $this->cas_options['path']);
+            $this->cas_options['host'], $this->cas_options['port'], $this->cas_options['path'],
+            $start_session);
         phpCAS::setNoCasServerValidation();
         phpCAS::setCacheTimesForAuthRecheck(-1);
 
