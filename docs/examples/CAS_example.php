@@ -18,6 +18,5 @@ if (!$auth->isLoggedIn()) {
 	echo '<a href="?login=true">Click here to log in!</a>';
 } else {
 	echo "You are logged in as {$auth->getUser()}<br />";
-	$self = $_SERVER['PHP_SELF'];
-	echo "<a href='$self?logout'>logout</a>";
+	echo "<a href='?logout'>logout</a>";
 }
