@@ -23,12 +23,12 @@ require_once 'PEAR/Frontend.php';
  */
 PEAR::setErrorHandling(PEAR_ERROR_DIE);
 chdir(dirname(__FILE__));
-//$pfm = PEAR_PackageFileManager2::importOptions('package.xml', array(
-$pfm = new PEAR_PackageFileManager2();
-$pfm->setOptions(array(
+$pfm = PEAR_PackageFileManager2::importOptions('package.xml', array(
+//$pfm = new PEAR_PackageFileManager2();
+//$pfm->setOptions(array(
     'packagedirectory' => dirname(__FILE__),
     'baseinstalldir' => '/',
-    'filelistgenerator' => 'cvs',
+    'filelistgenerator' => 'svn',
     'ignore' => array(  'package.xml',
                         '.project',
                         '*.tgz',
@@ -42,6 +42,7 @@ $pfm->setOptions(array(
                         'insert_sample_data.php',
                         'install.sh',
                         '*tests*',
+                        'test.txt',
                         '*scripts*'),
     'simpleoutput' => true,
     'roles'=>array('php'=>'php' ),
@@ -55,12 +56,13 @@ applications developed at UNL.');
 $pfm->setChannel('pear.unl.edu');
 $pfm->setAPIStability('alpha');
 $pfm->setReleaseStability('alpha');
-$pfm->setAPIVersion('0.1.0');
-$pfm->setReleaseVersion('0.1.0');
+$pfm->setAPIVersion('0.1.1');
+$pfm->setReleaseVersion('0.1.1');
 $pfm->setNotes('
-First Release - only CAS is available.');
+* Check if session is already started - kabel
+* Improve PHP docs and fix example. - bbieber');
 
-$pfm->addMaintainer('lead','saltybeagle','Brett Bieber','brett.bieber@gmail.com');
+//$pfm->addMaintainer('lead','saltybeagle','Brett Bieber','brett.bieber@gmail.com');
 $pfm->setLicense('BSD License', 'http://www1.unl.edu/wdn/wiki/Software_License');
 $pfm->clearDeps();
 $pfm->setPhpDep('5.0.0');
