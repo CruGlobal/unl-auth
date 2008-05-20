@@ -2,6 +2,17 @@
 /**
  * This is a generic authentication framework for UNL which will return customized
  * containers for use at UNL.
+ * 
+ * <code>
+ * <?php
+ * require_once 'UNL/Auth.php';
+ * $a = UNL_Auth::factory('CAS');
+ * if ($a->isLoggedIn()) {
+ *     echo 'Hello ' . $a->getUser();
+ * } else {
+ *     echo 'Sorry, you must log in.';
+ * }
+ * </code>
  *
  * PHP version 5
  * 
@@ -10,7 +21,7 @@
  * @author    Brett Bieber <brett.bieber@gmail.com>
  * @copyright 2007 Regents of the University of Nebraska
  * @license   http://www1.unl.edu/wdn/wiki/Software_License BSD License
- * @link      http://pear.unl.edu/
+ * @link      http://pear.unl.edu/package/UNL_Auth
  */
 class UNL_Auth
 {
@@ -68,6 +79,7 @@ class UNL_Auth
     public function ZendFactory($auth_type, $options = null)
     {
         /// Get the class name, return the Zend Auth extended class
+        throw new Exception('not implemented yet!');
     }
     
     /**

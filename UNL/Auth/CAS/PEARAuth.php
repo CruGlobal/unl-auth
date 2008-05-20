@@ -9,7 +9,7 @@
  * @author    Brett Bieber <brett.bieber@gmail.com>
  * @copyright 2007 Regents of the University of Nebraska
  * @license   http://www1.unl.edu/wdn/wiki/Software_License BSD License
- * @link      http://pear.unl.edu/
+ * @link      http://pear.unl.edu/package/UNL_Auth
  */
 
 include_once 'Auth/Container.php';
