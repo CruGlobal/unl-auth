@@ -22,7 +22,7 @@
  * @link      http://pear.unl.edu/package/UNL_Auth
  */
 
-require_once 'CAS/CAS.php';
+require_once 'CAS.php';
 
 
 /**
@@ -67,7 +67,7 @@ class UNL_Auth_CAS extends UNL_Auth
      */
     private function __construct(array $options = null)
     {
-        if (isset($_SESSION)) {
+        if (session_id() != '') {
             $start_session = false;
         } else {
             $start_session = true;
@@ -114,7 +114,7 @@ class UNL_Auth_CAS extends UNL_Auth
         $this->isAuth = false;
         phpCAS::forceAuthentication();
         if (!empty($_SERVER['HTTP_REFERER'])) {
-            phpCAS::logout($_SERVER['HTTP_REFERER']);
+            phpCAS::logoutWithUrl($_SERVER['HTTP_REFERER']);
         } else {
             phpCAS::logout();
         }

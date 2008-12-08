@@ -56,11 +56,10 @@ applications developed at UNL.');
 $pfm->setChannel('pear.unl.edu');
 $pfm->setAPIStability('alpha');
 $pfm->setReleaseStability('alpha');
-$pfm->setAPIVersion('0.1.1');
-$pfm->setReleaseVersion('0.1.1');
+$pfm->setAPIVersion('0.2.0');
+$pfm->setReleaseVersion('0.2.0');
 $pfm->setNotes('
-* Check if session is already started - kabel
-* Improve PHP docs and fix example. - bbieber');
+* Upgrade CAS driver dependency to 1.0.0');
 
 //$pfm->addMaintainer('lead','saltybeagle','Brett Bieber','brett.bieber@gmail.com');
 $pfm->setLicense('BSD License', 'http://www1.unl.edu/wdn/wiki/Software_License');
@@ -68,7 +67,7 @@ $pfm->clearDeps();
 $pfm->setPhpDep('5.0.0');
 $pfm->setPearinstallerDep('1.4.3');
 $pfm->addPackageDepWithChannel('optional', 'Auth', 'pear.php.net', '1.0');
-$pfm->addPackageDepWithChannel('optional', 'CAS',  'pear.unl.edu', '0.6.0RC6');
+$pfm->addPackageDepWithChannel('optional', 'CAS',  'pear.unl.edu', '1.0.0');
 
 $pfm->generateContents();
 if (isset($_SERVER['argv']) && $_SERVER['argv'][1] == 'make') {
