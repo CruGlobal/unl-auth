@@ -56,22 +56,21 @@ applications developed at UNL.');
 $pfm->setChannel('pear.unl.edu');
 $pfm->setAPIStability('alpha');
 $pfm->setReleaseStability('alpha');
-$pfm->setAPIVersion('0.2.0');
-$pfm->setReleaseVersion('0.2.0');
+$pfm->setAPIVersion('0.3.0');
+$pfm->setReleaseVersion('0.3.0');
 $pfm->setNotes('
-* Upgrade CAS driver dependency to 1.0.0');
+* Enable SimpleCAS support. http://code.google.com/p/simplecas/');
 
-//$pfm->addMaintainer('lead','saltybeagle','Brett Bieber','brett.bieber@gmail.com');
+$pfm->updateMaintainer('lead','saltybeagle','Brett Bieber','brett.bieber@gmail.com');
 $pfm->setLicense('BSD License', 'http://www1.unl.edu/wdn/wiki/Software_License');
 $pfm->clearDeps();
-$pfm->setPhpDep('5.0.0');
+$pfm->setPhpDep('5.1.2');
 $pfm->setPearinstallerDep('1.4.3');
 $pfm->addPackageDepWithChannel('optional', 'Auth', 'pear.php.net', '1.0');
 $pfm->addPackageDepWithChannel('optional', 'CAS',  'pear.unl.edu', '1.0.0');
+$pfm->addPackageDepWithChannel('optional', 'CAS',  'simplecas.googlecode.com/svn', '0.1.1');
+
 
 $pfm->generateContents();
-if (isset($_SERVER['argv']) && $_SERVER['argv'][1] == 'make') {
-    $pfm->writePackageFile();
-} else {
-    $pfm->debugPackageFile();
-}
+
+$pfm->writePackageFile();

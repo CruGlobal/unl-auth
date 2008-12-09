@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.7.3" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.8.0alpha1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
  <name>UNL_Auth</name>
  <channel>pear.unl.edu</channel>
  <summary>An authentication framework for PHP Applications at UNL</summary>
@@ -11,11 +11,11 @@ applications developed at UNL.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2008-08-22</date>
- <time>15:59:46</time>
+ <date>2008-12-09</date>
+ <time>10:21:13</time>
  <version>
-  <release>0.2.0</release>
-  <api>0.2.0</api>
+  <release>0.3.0</release>
+  <api>0.3.0</api>
  </version>
  <stability>
   <release>alpha</release>
@@ -23,13 +23,14 @@ applications developed at UNL.</description>
  </stability>
  <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
  <notes>
-* Upgrade CAS driver dependency to 1.0.0</notes>
+* Enable SimpleCAS support. http://code.google.com/p/simplecas/</notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <dir name="docs">
     <dir name="examples">
      <file name="CASPEARAuth_example.php" role="doc" />
      <file name="CAS_example.php" role="doc" />
+     <file name="SimpleCAS_example.php" role="doc" />
     </dir> <!-- /docs/examples -->
    </dir> <!-- /docs -->
    <dir name="UNL">
@@ -38,6 +39,7 @@ applications developed at UNL.</description>
       <file name="PEARAuth.php" role="php" />
      </dir> <!-- /UNL/Auth/CAS -->
      <file name="CAS.php" role="php" />
+     <file name="SimpleCAS.php" role="php" />
     </dir> <!-- /UNL/Auth -->
     <file name="Auth.php" role="php" />
    </dir> <!-- /UNL -->
@@ -46,7 +48,7 @@ applications developed at UNL.</description>
  <dependencies>
   <required>
    <php>
-    <min>5.0.0</min>
+    <min>5.1.2</min>
    </php>
    <pearinstaller>
     <min>1.4.3</min>
@@ -62,6 +64,11 @@ applications developed at UNL.</description>
     <name>CAS</name>
     <channel>pear.unl.edu</channel>
     <min>1.0.0</min>
+   </package>
+   <package>
+    <name>CAS</name>
+    <channel>simplecas.googlecode.com/svn</channel>
+    <min>0.1.1</min>
    </package>
   </optional>
  </dependencies>
@@ -105,8 +112,21 @@ applications developed at UNL.</description>
    </stability>
    <date>2008-08-22</date>
    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+   <notes>* Upgrade CAS driver dependency to 1.0.0</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.0</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2008-12-09</date>
+   <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
    <notes>
-* Upgrade CAS driver dependency to 1.0.0</notes>
+* Enable SimpleCAS support. http://code.google.com/p/simplecas/</notes>
   </release>
  </changelog>
 </package>
