@@ -12,7 +12,7 @@ applications developed at UNL.</description>
   <active>yes</active>
  </lead>
  <date>2008-12-09</date>
- <time>10:21:13</time>
+ <time>10:54:12</time>
  <version>
   <release>0.3.0</release>
   <api>0.3.0</api>
@@ -66,7 +66,7 @@ applications developed at UNL.</description>
     <min>1.0.0</min>
    </package>
    <package>
-    <name>CAS</name>
+    <name>SimpleCAS</name>
     <channel>simplecas.googlecode.com/svn</channel>
     <min>0.1.1</min>
    </package>

@@ -68,7 +68,7 @@ $pfm->setPhpDep('5.1.2');
 $pfm->setPearinstallerDep('1.4.3');
 $pfm->addPackageDepWithChannel('optional', 'Auth', 'pear.php.net', '1.0');
 $pfm->addPackageDepWithChannel('optional', 'CAS',  'pear.unl.edu', '1.0.0');
-$pfm->addPackageDepWithChannel('optional', 'CAS',  'simplecas.googlecode.com/svn', '0.1.1');
+$pfm->addPackageDepWithChannel('optional', 'SimpleCAS',  'simplecas.googlecode.com/svn', '0.1.1');
 
 
 $pfm->generateContents();
