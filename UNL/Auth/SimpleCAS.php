@@ -62,6 +62,9 @@ class UNL_Auth_SimpleCAS extends UNL_Auth
         $server = new SimpleCAS_Server_Version2($options['host'],
                                                 $options['port'],
                                                 $options['path']);
+        
+        $server->getRequest()->setConfig('ssl_verify_peer', false);
+        
         $this->client = SimpleCAS::client($server);
         if ($this->client->isAuthenticated()) {
             $this->isAuth = true;

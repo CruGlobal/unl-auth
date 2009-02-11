@@ -11,10 +11,10 @@ applications developed at UNL.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2008-12-09</date>
- <time>10:54:12</time>
+ <date>2009-02-11</date>
+ <time>15:25:49</time>
  <version>
-  <release>0.3.0</release>
+  <release>0.3.1</release>
   <api>0.3.0</api>
  </version>
  <stability>
@@ -23,7 +23,8 @@ applications developed at UNL.</description>
  </stability>
  <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
  <notes>
-* Enable SimpleCAS support. http://code.google.com/p/simplecas/</notes>
+* Increase SimpleCAS dependency of 0.2.0 to take advantage of getRequest() so we can ignore the ssl peer verification.
+ </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <dir name="docs">
@@ -68,7 +69,7 @@ applications developed at UNL.</description>
    <package>
     <name>SimpleCAS</name>
     <channel>simplecas.googlecode.com/svn</channel>
-    <min>0.1.1</min>
+    <min>0.2.0</min>
    </package>
   </optional>
  </dependencies>
@@ -85,7 +86,9 @@ applications developed at UNL.</description>
    </stability>
    <date>2007-12-17</date>
    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
-   <notes>First Release - only CAS is available.</notes>
+   <notes>
+First Release - only CAS is available.
+   </notes>
   </release>
   <release>
    <version>
@@ -98,8 +101,10 @@ applications developed at UNL.</description>
    </stability>
    <date>2008-05-20</date>
    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
-   <notes>* Check if session is already started - kabel
-* Improve PHP docs and fix example. - bbieber</notes>
+   <notes>
+* Check if session is already started - kabel
+* Improve PHP docs and fix example. - bbieber
+   </notes>
   </release>
   <release>
    <version>
@@ -112,7 +117,9 @@ applications developed at UNL.</description>
    </stability>
    <date>2008-08-22</date>
    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
-   <notes>* Upgrade CAS driver dependency to 1.0.0</notes>
+   <notes>
+* Upgrade CAS driver dependency to 1.0.0
+   </notes>
   </release>
   <release>
    <version>
@@ -126,7 +133,23 @@ applications developed at UNL.</description>
    <date>2008-12-09</date>
    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
    <notes>
-* Enable SimpleCAS support. http://code.google.com/p/simplecas/</notes>
+* Enable SimpleCAS support. http://code.google.com/p/simplecas/
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.1</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2009-02-11</date>
+   <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+   <notes>
+* Increase SimpleCAS dependency of 0.2.0 to take advantage of getRequest() so we can ignore the ssl peer verification.
+   </notes>
   </release>
  </changelog>
 </package>
