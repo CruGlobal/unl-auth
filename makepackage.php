@@ -43,7 +43,8 @@ $pfm = PEAR_PackageFileManager2::importOptions('package.xml', array(
                         'install.sh',
                         '*tests*',
                         'test.txt',
-                        '*scripts*'),
+                        '*scripts*',
+                        'CasZendAuthAdapter.php'),
     'simpleoutput' => true,
     'roles'=>array('php'=>'php' ),
     'exceptions'=>array()

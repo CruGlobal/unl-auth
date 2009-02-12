@@ -11,8 +11,8 @@ applications developed at UNL.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-02-11</date>
- <time>15:25:49</time>
+ <date>2009-02-12</date>
+ <time>10:31:51</time>
  <version>
   <release>0.3.1</release>
   <api>0.3.0</api>
@@ -32,6 +32,7 @@ applications developed at UNL.</description>
      <file name="CASPEARAuth_example.php" role="doc" />
      <file name="CAS_example.php" role="doc" />
      <file name="SimpleCAS_example.php" role="doc" />
+     <file name="Zend_SimpleCAS_example.php" role="doc" />
     </dir> <!-- /docs/examples -->
    </dir> <!-- /docs -->
    <dir name="UNL">
@@ -39,6 +40,9 @@ applications developed at UNL.</description>
      <dir name="CAS">
       <file name="PEARAuth.php" role="php" />
      </dir> <!-- /UNL/Auth/CAS -->
+     <dir name="SimpleCAS">
+      <file name="ZendAuth.php" role="php" />
+     </dir> <!-- /UNL/Auth/SimpleCAS -->
      <file name="CAS.php" role="php" />
      <file name="SimpleCAS.php" role="php" />
     </dir> <!-- /UNL/Auth -->
@@ -145,7 +149,7 @@ First Release - only CAS is available.
     <release>alpha</release>
     <api>alpha</api>
    </stability>
-   <date>2009-02-11</date>
+   <date>2009-02-12</date>
    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
    <notes>
 * Increase SimpleCAS dependency of 0.2.0 to take advantage of getRequest() so we can ignore the ssl peer verification.
