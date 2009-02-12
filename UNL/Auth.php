@@ -78,6 +78,7 @@ class UNL_Auth
     
     public function ZendFactory($auth_type, $options = null)
     {
+        throw new Exception('not implemented yet!');
         /// Get the class name, return the Zend Auth extended class
         $auth_class = 'UNL_Auth_'.$auth_type.'_ZendAuth';
         $class_file = dirname(__FILE__).'/Auth/'.$auth_type.'/ZendAuth.php';
