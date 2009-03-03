@@ -47,9 +47,9 @@ class UNL_Auth_SimpleCAS extends UNL_Auth
      *
      * @var array
      */
-    protected $options = array('host' => 'login.unl.edu',
-                               'port' => 443,
-                               'path' => 'cas');
+    protected $options = array('hostname' => 'login.unl.edu',
+                               'port'     => 443,
+                               'uri'      => 'cas');
     
     protected $client;
     
@@ -59,13 +59,11 @@ class UNL_Auth_SimpleCAS extends UNL_Auth
     private function __construct(array $options = array())
     {
         $options = array_merge($this->options, $options);
-        $server = new SimpleCAS_Server_Version2($options['host'],
-                                                $options['port'],
-                                                $options['path']);
+        $protocol = new SimpleCAS_Protocol_Version2($this->options);
         
-        $server->getRequest()->setConfig('ssl_verify_peer', false);
+        $protocol->getRequest()->setConfig('ssl_verify_peer', false);
         
-        $this->client = SimpleCAS::client($server);
+        $this->client = SimpleCAS::client($protocol);
         if ($this->client->isAuthenticated()) {
             $this->isAuth = true;
             $this->uid    = $this->client->getUsername();

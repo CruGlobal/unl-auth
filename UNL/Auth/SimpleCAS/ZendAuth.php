@@ -7,11 +7,7 @@
  * public function casAction()
  * {
  *     $auth = Zend_Auth::getInstance();
- *     $authAdapter = new UNL_Auth::(
- *         Zend_Registry::get('config')->auth->cas->hostname,
- *         Zend_Registry::get('config')->auth->cas->port,
- *         Zend_Registry::get('config')->auth->cas->uri
- *     );
+ *     $authAdapter = UNL_Auth::factory('SimpleCAS', Zend_Registry::get('config')->auth->cas);
  * 
  *     # User has not been identified, and there's a ticket in the URL
  *     if (!$auth->hasIdentity() && isset($_GET['ticket'])) {
