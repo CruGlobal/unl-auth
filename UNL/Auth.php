@@ -19,7 +19,7 @@
  * @category  Authentication 
  * @package   UNL_Auth
  * @author    Brett Bieber <brett.bieber@gmail.com>
- * @copyright 2008 Regents of the University of Nebraska
+ * @copyright 2009 Regents of the University of Nebraska
  * @license   http://www1.unl.edu/wdn/wiki/Software_License BSD License
  * @link      http://pear.unl.edu/package/UNL_Auth
  */
@@ -51,7 +51,7 @@ class UNL_Auth
      * 
      * @return mixed
      */
-    public function factory($auth_type, $options = null)
+    public static function factory($auth_type, $options = null)
     {
         $auth_class = 'UNL_Auth_'.$auth_type;
         $class_file = dirname(__FILE__).'/Auth/'.$auth_type.'.php';
@@ -66,7 +66,7 @@ class UNL_Auth
      * 
      * @return mixed
      */
-    public function PEARFactory($auth_type, $options = null, $loginFunction = null, $showLogin = true)
+    public static function PEARFactory($auth_type, $options = null, $loginFunction = null, $showLogin = true)
     {
         require_once 'Auth/Auth.php';
         /// Get the class... return the pear auth container.
@@ -76,7 +76,7 @@ class UNL_Auth
         return $container->getPEARAuth($options, $loginFunction, $showLogin);
     }
     
-    public function ZendFactory($auth_type, $options = null)
+    public static function ZendFactory($auth_type, $options = null)
     {
         throw new Exception('not implemented yet!');
         /// Get the class name, return the Zend Auth extended class
@@ -95,7 +95,7 @@ class UNL_Auth
      * 
      * @return object
      */
-    protected function discoverAndReturn($class, $class_file, $options = null)
+    protected static function discoverAndReturn($class, $class_file, $options = null)
     {
         if (!class_exists($class)) {
             if (file_exists($class_file)) {

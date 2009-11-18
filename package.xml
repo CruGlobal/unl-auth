@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.8.0alpha1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
  <name>UNL_Auth</name>
  <channel>pear.unl.edu</channel>
  <summary>An authentication framework for PHP Applications at UNL</summary>
@@ -11,11 +11,11 @@ applications developed at UNL.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-03-03</date>
- <time>10:14:35</time>
+ <date>2009-11-18</date>
+ <time>10:46:19</time>
  <version>
-  <release>0.3.2</release>
-  <api>0.3.0</api>
+  <release>0.4.0</release>
+  <api>0.4.0</api>
  </version>
  <stability>
   <release>alpha</release>
@@ -23,7 +23,7 @@ applications developed at UNL.</description>
  </stability>
  <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
  <notes>
-* Increase SimpleCAS dependency of 0.3.0 to use new object names and array options for the constructor.
+* Fix E_STRICT warning about static methods.
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -53,7 +53,7 @@ applications developed at UNL.</description>
  <dependencies>
   <required>
    <php>
-    <min>5.1.2</min>
+    <min>5.2.0</min>
    </php>
    <pearinstaller>
     <min>1.4.3</min>
@@ -168,6 +168,21 @@ First Release - only CAS is available.
    <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
    <notes>
 * Increase SimpleCAS dependency of 0.3.0 to use new object names and array options for the constructor.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.4.0</release>
+    <api>0.4.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2009-11-18</date>
+   <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
+   <notes>
+* Fix E_STRICT warning about static methods.
    </notes>
   </release>
  </changelog>

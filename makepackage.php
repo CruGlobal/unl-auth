@@ -57,15 +57,15 @@ applications developed at UNL.');
 $pfm->setChannel('pear.unl.edu');
 $pfm->setAPIStability('alpha');
 $pfm->setReleaseStability('alpha');
-$pfm->setAPIVersion('0.3.0');
-$pfm->setReleaseVersion('0.3.2');
+$pfm->setAPIVersion('0.4.0');
+$pfm->setReleaseVersion('0.4.0');
 $pfm->setNotes('
-* Increase SimpleCAS dependency of 0.3.0 to use new object names and array options for the constructor.');
+* Fix E_STRICT warning about static methods.');
 
 $pfm->updateMaintainer('lead','saltybeagle','Brett Bieber','brett.bieber@gmail.com');
 $pfm->setLicense('BSD License', 'http://www1.unl.edu/wdn/wiki/Software_License');
 $pfm->clearDeps();
-$pfm->setPhpDep('5.1.2');
+$pfm->setPhpDep('5.2.0');
 $pfm->setPearinstallerDep('1.4.3');
 $pfm->addPackageDepWithChannel('optional', 'Auth', 'pear.php.net', '1.0');
 $pfm->addPackageDepWithChannel('optional', 'CAS',  'pear.unl.edu', '1.0.0');
