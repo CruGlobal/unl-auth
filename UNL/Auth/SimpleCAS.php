@@ -103,9 +103,9 @@ class UNL_Auth_SimpleCAS extends UNL_Auth
         return $this->client->forceAuthentication();
     }
     
-    function logout()
+    function logout($url = '')
     {
-        return $this->client->logout();
+        return $this->client->logout($url);
     }
 }
 ?>
