@@ -13,7 +13,6 @@
  */
 
 require_once 'SimpleCAS/Autoload.php';
-require_once 'HTTP/Request2.php';
 
 /**
  * UNL_Auth_SimpleCAS
