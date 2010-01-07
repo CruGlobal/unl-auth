@@ -60,7 +60,11 @@ class UNL_Auth_SimpleCAS extends UNL_Auth
         $options = array_merge($this->options, $options);
         $protocol = new SimpleCAS_Protocol_Version2($options);
         
-        $protocol->getRequest()->setConfig('ssl_verify_peer', false);
+        $request = $protocol->getRequest();
+        $defaultClass = SimpleCAS_Protocol::DEFAULT_REQUEST_CLASS;
+        if ($request instanceof $defaultClass) {
+            $protocol->getRequest()->setConfig('ssl_verify_peer', false);
+        }
         
         $this->client = SimpleCAS::client($protocol);
         if ($this->client->isAuthenticated()) {
