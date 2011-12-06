@@ -76,8 +76,8 @@ applications developed at UNL.</description>
    </package>
    <package>
     <name>SimpleCAS</name>
-    <channel>simplecas.googlecode.com/svn</channel>
-    <min>0.3.0</min>
+    <channel>saltybeagle.github.com/SimpleCAS</channel>
+    <min>0.6.0</min>
    </package>
   </optional>
  </dependencies>

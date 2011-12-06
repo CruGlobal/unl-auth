@@ -1,3 +1,4 @@
 Feature Release:
 
 * Pass function calls through to SimpleCAS client
+* Update SimpleCAS channel reference
