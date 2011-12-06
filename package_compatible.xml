@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
+ <name>UNL_Auth</name>
+ <channel>pear.unl.edu</channel>
+ <date>2011-12-06</date>
+ <time>13:56:34</time>
+ <version>
+  <release>0.5.0</release>
+  <api>0.4.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Feature Release:
+
+* Pass function calls through to SimpleCAS client
+</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/UNL/CasZendAuthAdapter.php"/>
+   <file role="php" name="php/UNL/Auth/SimpleCAS/ZendAuth.php"/>
+   <file role="php" name="php/UNL/Auth/SimpleCAS.php"/>
+   <file role="php" name="php/UNL/Auth/CAS/PEARAuth.php"/>
+   <file role="php" name="php/UNL/Auth/CAS.php"/>
+   <file role="php" name="php/UNL/Auth.php"/>
+   <file role="doc" name="doc/pear.unl.edu/UNL_Auth/examples/examples/Zend_SimpleCAS_example.php"/>
+   <file role="doc" name="doc/pear.unl.edu/UNL_Auth/examples/examples/SimpleCAS_example.php"/>
+   <file role="doc" name="doc/pear.unl.edu/UNL_Auth/examples/examples/CAS_example.php"/>
+   <file role="doc" name="doc/pear.unl.edu/UNL_Auth/examples/examples/CASPEARAuth_example.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.8</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install name="doc/pear.unl.edu/UNL_Auth/examples/examples/CASPEARAuth_example.php" as="UNL_Auth/examples/examples/CASPEARAuth_example.php"/>
+   <install name="doc/pear.unl.edu/UNL_Auth/examples/examples/CAS_example.php" as="UNL_Auth/examples/examples/CAS_example.php"/>
+   <install name="doc/pear.unl.edu/UNL_Auth/examples/examples/SimpleCAS_example.php" as="UNL_Auth/examples/examples/SimpleCAS_example.php"/>
+   <install name="doc/pear.unl.edu/UNL_Auth/examples/examples/Zend_SimpleCAS_example.php" as="UNL_Auth/examples/examples/Zend_SimpleCAS_example.php"/>
+   <install name="php/UNL/Auth.php" as="UNL/Auth.php"/>
+   <install name="php/UNL/Auth/CAS.php" as="UNL/Auth/CAS.php"/>
+   <install name="php/UNL/Auth/CAS/PEARAuth.php" as="UNL/Auth/CAS/PEARAuth.php"/>
+   <install name="php/UNL/Auth/SimpleCAS.php" as="UNL/Auth/SimpleCAS.php"/>
+   <install name="php/UNL/Auth/SimpleCAS/ZendAuth.php" as="UNL/Auth/SimpleCAS/ZendAuth.php"/>
+   <install name="php/UNL/CasZendAuthAdapter.php" as="UNL/CasZendAuthAdapter.php"/>
+  </filelist>
+ </phprelease>
+</package>

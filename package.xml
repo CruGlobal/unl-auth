@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+<package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
  <name>UNL_Auth</name>
  <channel>pear.unl.edu</channel>
  <summary>An authentication framework for PHP Applications at UNL</summary>
@@ -11,10 +11,10 @@ applications developed at UNL.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2009-11-18</date>
- <time>10:46:19</time>
+ <date>2011-12-06</date>
+ <time>13:56:34</time>
  <version>
-  <release>0.4.0</release>
+  <release>0.5.0</release>
   <api>0.4.0</api>
  </version>
  <stability>
@@ -22,33 +22,37 @@ applications developed at UNL.</description>
   <api>alpha</api>
  </stability>
  <license uri="http://www1.unl.edu/wdn/wiki/Software_License">BSD License</license>
- <notes>
-* Fix E_STRICT warning about static methods.
- </notes>
+ <notes>Feature Release:
+
+* Pass function calls through to SimpleCAS client
+</notes>
  <contents>
-  <dir baseinstalldir="/" name="/">
-   <dir name="docs">
+  <dir name="/">
+   <dir name="docs" baseinstalldir="/">
     <dir name="examples">
-     <file name="CASPEARAuth_example.php" role="doc" />
-     <file name="CAS_example.php" role="doc" />
-     <file name="SimpleCAS_example.php" role="doc" />
-     <file name="Zend_SimpleCAS_example.php" role="doc" />
-    </dir> <!-- /docs/examples -->
-   </dir> <!-- /docs -->
-   <dir name="UNL">
-    <dir name="Auth">
-     <dir name="CAS">
-      <file name="PEARAuth.php" role="php" />
-     </dir> <!-- /UNL/Auth/CAS -->
-     <dir name="SimpleCAS">
-      <file name="ZendAuth.php" role="php" />
-     </dir> <!-- /UNL/Auth/SimpleCAS -->
-     <file name="CAS.php" role="php" />
-     <file name="SimpleCAS.php" role="php" />
-    </dir> <!-- /UNL/Auth -->
-    <file name="Auth.php" role="php" />
-   </dir> <!-- /UNL -->
-  </dir> <!-- / -->
+     <file role="doc" name="CASPEARAuth_example.php"/>
+     <file role="doc" name="CAS_example.php"/>
+     <file role="doc" name="SimpleCAS_example.php"/>
+     <file role="doc" name="Zend_SimpleCAS_example.php"/>
+    </dir>
+   </dir>
+   <dir name="src" baseinstalldir="/">
+    <dir name="UNL">
+     <dir name="Auth">
+      <dir name="CAS">
+       <file role="php" name="PEARAuth.php"/>
+      </dir>
+      <dir name="SimpleCAS">
+       <file role="php" name="ZendAuth.php"/>
+      </dir>
+      <file role="php" name="CAS.php"/>
+      <file role="php" name="SimpleCAS.php"/>
+     </dir>
+     <file role="php" name="Auth.php"/>
+     <file role="php" name="CasZendAuthAdapter.php"/>
+    </dir>
+   </dir>
+  </dir>
  </contents>
  <dependencies>
   <required>
@@ -77,7 +81,7 @@ applications developed at UNL.</description>
    </package>
   </optional>
  </dependencies>
- <phprelease />
+ <phprelease/>
  <changelog>
   <release>
    <version>
