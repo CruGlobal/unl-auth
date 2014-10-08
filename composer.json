@@ -1,5 +1,5 @@
 {
-    "name": "UNL/Auth",
+    "name": "unl/auth",
     "autoload": {
         "psr-0": { "": "src/" }
     },
