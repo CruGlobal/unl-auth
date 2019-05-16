@@ -12,8 +12,6 @@
  * @link      http://pear.unl.edu/package/UNL_Auth
  */
 
-require_once 'SimpleCAS/Autoload.php';
-
 /**
  * UNL_Auth_SimpleCAS
  *
